@@ -39,7 +39,7 @@ nav {
 
 .main_flex {
     display: flex;
-    gap: 24px;
+    /* gap: 5px; */
 }
 
 .content {
@@ -51,6 +51,7 @@ nav {
 
 .suggestions {
     width: 320px;
+    margin-left: 20px;
 }
 
 .story_block {
