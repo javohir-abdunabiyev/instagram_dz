@@ -44,6 +44,9 @@ nav {
 
 .content {
     width: 616px;
+    height: 680px;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .suggestions {
