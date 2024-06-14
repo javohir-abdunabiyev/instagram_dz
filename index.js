@@ -92,7 +92,7 @@ function reload(arr) {
         const more = document.createElement("p")
         more.classList.add("more")
         more.innerHTML = "more"
-        description_p.innerHTML = `<b>nickname</b> nickname Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis... ${more.innerHTML}`
+        description_p.innerHTML = `<b>nickname</b> ${elem.title}`
 
         const cm_count = 33
         const view_comments = document.createElement("p")
