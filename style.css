@@ -23,6 +23,13 @@ header {
     padding-bottom: 12px;
 }
 
+.my_icon {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 header input {
     text-align: center;
     width: 208px;
@@ -43,7 +50,7 @@ nav {
 }
 
 .content {
-    width: 616px;
+    width: 620px;
     height: 680px;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -59,10 +66,10 @@ nav {
     padding-left: 24px;
     padding-right: 24px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 4%;
+    text-align: center;
     gap: 16px;
-    height: 120px;
+    height: 150px;
     width: 618px;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -86,6 +93,8 @@ nav {
 }
 
 .nickname {
+    width: 65px;
+    word-wrap: break-word;
     margin-top: 8px;
     font-weight: 400;
     font-size: 14px;
@@ -171,10 +180,15 @@ nav {
     height: 55px;
     width: 616px;
     background-color: none;
-    border: 1px solid rgba(219, 219, 219, 1);
+    border-top: 1px solid rgba(219, 219, 219, 1);
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
 }
 
-
+.input_comment:focus {
+    outline: none;
+}
 
 .suggestion_user {
     display: flex;
@@ -191,6 +205,8 @@ nav {
 .suggest_avatar {
     width: 64px;
     height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .name_surname {
@@ -235,11 +251,245 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 8px;
+    margin: 10px;
 }
 
 .follow {
     color: rgba(0, 149, 246, 1);
     font-size: 14px;
     font-weight: 500;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    width: 60px;
+    height: 55px;
+    border-left: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-top: 1px solid rgba(219, 219, 219, 1);
+    background: none;
+    background-color: #FFFFFF;
+    color: rgba(0, 149, 246, 1);
+    font-weight: bold;
+}
+
+input::placeholder {
+    text-indent: 20px;
+}
+
+.user_avatar {
+    border-radius: 50%;
+}
+
+.modal {
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    position: fixed;
+    top: 3%;
+    left: 34%;    
+    border: 0px;
+    width: 394px;
+    height: 700px;
+}
+
+.answer_user {
+    width: 274px;
+    height: 44px;
+    padding: 0 8px 0 11px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 30px;
+    background: none;
+}
+
+.answer_user:focus {
+    border: 1px solid rgb(219, 219, 219);
+    outline: none;
+}
+
+.div_form {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    pointer-events: auto;
+}
+
+.line_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1px solid;
+    background-color: white;
+    width: 362px;
+    height: 2px;
+    margin: 20px 16px;
+}
+
+.profile_img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.pr_pause_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: white;
+}
+
+.profile_time {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 8px;
+}
+
+.pause_btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    width: 16px;
+    height: 16px;
+}
+
+.pause_div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.closeModal {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    color: white;
+    border: 0;
+    font-size: 24px;
+    background: none;
+    top: 90px;
+    right: 16px;
+}
+
+.comment_modal {
+    width: 960px;
+    height: 680px;
+    border-radius: 10px;
+    position: fixed;
+    top: 3%;
+    left: 20%;    
+    border: 0px;
+}
+
+.div_for_cmmodal {
+    display: flex;
+    gap: 16px;
+}
+
+.content_img {
+    width: 470px;
+    height: 680px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.user_profile_avatar_name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-bottom:  1px solid rgba(204, 204, 204, 1);
+}
+
+.user_profile_div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user_profile_div_avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comments_div {
+    width: 474px;
+}
+
+.comments_area {
+    height: 455px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 16px 16px 16px 0;
+}
+
+.likes_repost_comment {
+    border-top:  1px solid rgba(204, 204, 204, 1);
+}
+
+.input_in_comment {
+    height: 55px;
+    width: 380px;
+    background-color: none;
+    border-top: 1px solid rgba(219, 219, 219, 1);
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+.input_in_comment:focus {
+    outline: none;
+}
+
+.grey {
+    color: grey;
+}
+
+.comment_div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.closecommentmodal {
+    position: absolute;
+    top: 7px;
+    right: 16px;
+    font-size: 16px;
+    background: none;
+    border: 0;
+}
+
+.comment_remove {
+    background: none;
+    border: 0;
+}
+
+.second_div {
+    display: flex;
+    width: 450px;
+    gap: 18px;
+    word-wrap: break-word; /* Для старых версий браузеров */
+    overflow-wrap: break-word;
+}
+
+.user_comment_cm {
+    width: 320px;
 }
