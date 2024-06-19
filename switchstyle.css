@@ -4,7 +4,7 @@
     --color-switcher: rgba(38, 38, 38, 1);
 }
 
-body.darkstyle {
+.darkstyle {
     background-color: #1F1F1F;
     --color-body: #F8F4F0;
     --color-switcher: white;

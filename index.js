@@ -197,14 +197,6 @@ function reload(arr, users) {
                             `
 
 
-
-
-
-
-
-
-
-
         const comment_modal = document.createElement("dialog")
         comment_modal.classList.add("comment_modal")
 
@@ -224,7 +216,7 @@ function reload(arr, users) {
         user_profile_div_avatar.className = "user_profile_div_avatar"
         user_profile_div_avatar.src = item.url
         const user_profile_nickname = document.createElement("p")
-        user_profile_nickname.innerHTML = "gigachad"
+        user_profile_nickname.innerHTML = user.username
 
         const user_profile_option = document.createElement("div")
         user_profile_option.innerHTML = `
@@ -343,7 +335,7 @@ function reload(arr, users) {
             useravatar_comment.src = "img/gigachad.webp"
 
             const username_comment = document.createElement("p")
-            username_comment.innerHTML = `<b>${user.username}</b>`
+            username_comment.innerHTML = `<b>gigachad</b>`
 
             const user_comment_cm = document.createElement("p")
             user_comment_cm.classList.add("user_comment_cm")
