@@ -10,7 +10,10 @@ body {
 }
 
 .container {
-    width: 1070px;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -28,6 +31,19 @@ header {
     height: 24px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.style_changer {
+    background: none;
+    border-radius: 50%;
+    border: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.logo_and_style_changer {
+    display: flex;
+    align-items: center;
 }
 
 header input {
@@ -390,7 +406,8 @@ input::placeholder {
     border-radius: 10px;
     position: fixed;
     top: 3%;
-    left: 20%;    
+    left: 20%;
+    overflow: hidden;
     border: 0px;
 }
 

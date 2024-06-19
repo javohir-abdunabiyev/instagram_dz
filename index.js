@@ -129,8 +129,13 @@ function reload(arr, users) {
         const user_city = document.createElement("p")
         user_city.innerHTML = `${user.address.city}, ${user.address.street}`
 
-        const options = document.createElement("img")
-        options.src = "img/options.png"
+        const options = document.createElement("div")
+        options.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 13.5C12.8284 13.5 13.5 12.8284 13.5 12C13.5 11.1716 12.8284 10.5 12 10.5C11.1716 10.5 10.5 11.1716 10.5 12C10.5 12.8284 11.1716 13.5 12 13.5Z" fill="#262626"/>
+                            <path d="M6.5 13.5C7.32843 13.5 8 12.8284 8 12C8 11.1716 7.32843 10.5 6.5 10.5C5.67157 10.5 5 11.1716 5 12C5 12.8284 5.67157 13.5 6.5 13.5Z" fill="#262626"/>
+                            <path d="M17.5 13.5C18.3284 13.5 19 12.8284 19 12C19 11.1716 18.3284 10.5 17.5 10.5C16.6716 10.5 16 11.1716 16 12C16 12.8284 16.6716 13.5 17.5 13.5Z" fill="#262626"/>
+                            </svg>
+                            `
 
 
         const story_content = document.createElement("img")
@@ -145,15 +150,51 @@ function reload(arr, users) {
         const reactions = document.createElement("div")
         reactions.classList.add("reactions")
 
-        const like = document.createElement("img")
-        like.src = "img/like.svg"
-        const comment = document.createElement("img")
-        comment.src = "img/comment.svg"
-        const repost = document.createElement("img")
-        repost.src = "img/repost.svg"
+        const like = document.createElement("div")
+        like.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.3 3.05C20.15 3.05 22.5 5.65 22.5 8.8C22.5 12.2 19.55 14.3 16.75 16.8C13.95 19.3 12.5 20.65 12 20.95C11.45 20.6 9.65 18.95 7.25 16.8C4.4 14.3 1.5 12.2 1.5 8.8C1.5 5.65 3.85 3.05 6.7 3.05C8.8 3.05 9.95 4.05 10.75 5.2C11.7 6.5 11.85 7.15 12 7.15C12.15 7.15 12.3 6.5 13.25 5.2C14.05 4.05 15.2 3.05 17.3 3.05ZM17.3 1.55C15.05 1.55 13.35 2.45 12 4.35C10.65 2.5 8.95 1.6 6.7 1.6C3 1.55 0 4.8 0 8.8C0 12.45 2.7 14.8 5.3 17.05C5.6 17.3 5.95 17.6 6.25 17.9L7.4 18.9C9.6 20.85 10.7 21.85 11.2 22.15C11.45 22.3 11.75 22.4 12 22.4C12.3 22.4 12.55 22.3 12.8 22.15C13.3 21.85 14.2 21.05 16.7 18.75L17.7 17.85C18.05 17.55 18.35 17.25 18.7 17C21.35 14.8 24 12.5 24 8.8C24 4.8 21 1.55 17.3 1.55Z" fill="#262626"/>
+                            </svg>
+                         `
+        const comment = document.createElement("div")
+        comment.innerHTML = `
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_472)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.75 23.05L22.35 17.55C23.25 15.9 23.75 14 23.75 12C23.75 5.5 18.5 0.25 12 0.25C5.5 0.25 0.25 5.5 0.25 12C0.25 18.5 5.5 23.75 12 23.75C14 23.75 15.9 23.25 17.55 22.35L23.05 23.75C23.45 23.85 23.85 23.45 23.75 23.05ZM22.25 12C22.25 14 21.75 15.5 20.95 17C20.85 17.2 20.8 17.45 20.85 17.7L21.9 21.9L17.75 20.85C17.5 20.8 17.25 20.8 17.05 20.95C16.15 21.45 14.45 22.25 12.05 22.25C6.35 22.25 1.75 17.65 1.75 12C1.75 6.35 6.35 1.75 12 1.75C17.65 1.75 22.25 6.35 22.25 12Z" fill="#262626"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_2_472">
+                                <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                            `
+        const repost = document.createElement("div")
+        repost.innerHTML = `
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_474)">
+                                <path d="M23.9 1.9C23.75 1.65 23.5 1.5 23.25 1.5H0.75C0.45 1.55 0.15 1.75 0.05 2C-0.05 2.25 0 2.6 0.2 2.85L8.15 10.65L10.9 21.95C10.95 22.25 11.2 22.45 11.5 22.5H11.6C11.85 22.5 12.1 22.35 12.25 22.15L23.85 2.65C24.05 2.45 24.05 2.15 23.9 1.9ZM2.6 3.05H20.35L9 9.35L2.6 3.05ZM11.95 19.85L9.75 10.65L21.2 4.3L11.95 19.85Z" fill="#262626"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_2_474">
+                                <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                            `
 
-        const izbrannoe = document.createElement("img")
-        izbrannoe.src = "img/izbrannoe.svg"
+        const izbrannoe = document.createElement("div")
+        izbrannoe.innerHTML = `
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_476)">
+                                <path d="M21.75 24C21.55 24 21.35 23.9 21.2 23.8L12 14.5L2.8 23.8C2.6 24 2.25 24.1 2 23.95C1.7 23.85 1.5 23.55 1.5 23.25V0.75C1.5 0.35 1.85 0 2.25 0H21.75C22.15 0 22.5 0.35 22.5 0.75V23.25C22.5 23.55 22.3 23.85 22.05 23.95C21.95 24 21.85 24 21.75 24ZM12 13C12.4 13 12.8 13.15 13.1 13.45L21 21.45V1.5H3V21.45L10.9 13.45C11.2 13.15 11.6 13 12 13Z" fill="#262626"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_2_476">
+                                <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                            `
 
 
 
@@ -185,8 +226,14 @@ function reload(arr, users) {
         const user_profile_nickname = document.createElement("p")
         user_profile_nickname.innerHTML = "gigachad"
 
-        const user_profile_option = document.createElement("img")
-        user_profile_option.src = "img/options.png"
+        const user_profile_option = document.createElement("div")
+        user_profile_option.innerHTML = `
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 13.5C12.8284 13.5 13.5 12.8284 13.5 12C13.5 11.1716 12.8284 10.5 12 10.5C11.1716 10.5 10.5 11.1716 10.5 12C10.5 12.8284 11.1716 13.5 12 13.5Z" fill="#262626"/>
+                                            <path d="M6.5 13.5C7.32843 13.5 8 12.8284 8 12C8 11.1716 7.32843 10.5 6.5 10.5C5.67157 10.5 5 11.1716 5 12C5 12.8284 5.67157 13.5 6.5 13.5Z" fill="#262626"/>
+                                            <path d="M17.5 13.5C18.3284 13.5 19 12.8284 19 12C19 11.1716 18.3284 10.5 17.5 10.5C16.6716 10.5 16 11.1716 16 12C16 12.8284 16.6716 13.5 17.5 13.5Z" fill="#262626"/>
+                                            </svg>
+                                        `
 
 
         const comments_area = document.createElement("div")
@@ -203,15 +250,52 @@ function reload(arr, users) {
         const reactions_comment = document.createElement("div")
         reactions_comment.classList.add("reactions")
 
-        const like_comment = document.createElement("img")
-        like_comment.src = "img/like.svg"
-        const comment_comment = document.createElement("img")
-        comment_comment.src = "img/comment.svg"
-        const repost_comment = document.createElement("img")
-        repost_comment.src = "img/repost.svg"
+        const like_comment = document.createElement("div")
+        like_comment.innerHTML = `
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.3 3.05C20.15 3.05 22.5 5.65 22.5 8.8C22.5 12.2 19.55 14.3 16.75 16.8C13.95 19.3 12.5 20.65 12 20.95C11.45 20.6 9.65 18.95 7.25 16.8C4.4 14.3 1.5 12.2 1.5 8.8C1.5 5.65 3.85 3.05 6.7 3.05C8.8 3.05 9.95 4.05 10.75 5.2C11.7 6.5 11.85 7.15 12 7.15C12.15 7.15 12.3 6.5 13.25 5.2C14.05 4.05 15.2 3.05 17.3 3.05ZM17.3 1.55C15.05 1.55 13.35 2.45 12 4.35C10.65 2.5 8.95 1.6 6.7 1.6C3 1.55 0 4.8 0 8.8C0 12.45 2.7 14.8 5.3 17.05C5.6 17.3 5.95 17.6 6.25 17.9L7.4 18.9C9.6 20.85 10.7 21.85 11.2 22.15C11.45 22.3 11.75 22.4 12 22.4C12.3 22.4 12.55 22.3 12.8 22.15C13.3 21.85 14.2 21.05 16.7 18.75L17.7 17.85C18.05 17.55 18.35 17.25 18.7 17C21.35 14.8 24 12.5 24 8.8C24 4.8 21 1.55 17.3 1.55Z" fill="#262626"/>
+                                    </svg>
+                                `
+        const comment_comment = document.createElement("div")
+        comment_comment.innerHTML = `
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2_472)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.75 23.05L22.35 17.55C23.25 15.9 23.75 14 23.75 12C23.75 5.5 18.5 0.25 12 0.25C5.5 0.25 0.25 5.5 0.25 12C0.25 18.5 5.5 23.75 12 23.75C14 23.75 15.9 23.25 17.55 22.35L23.05 23.75C23.45 23.85 23.85 23.45 23.75 23.05ZM22.25 12C22.25 14 21.75 15.5 20.95 17C20.85 17.2 20.8 17.45 20.85 17.7L21.9 21.9L17.75 20.85C17.5 20.8 17.25 20.8 17.05 20.95C16.15 21.45 14.45 22.25 12.05 22.25C6.35 22.25 1.75 17.65 1.75 12C1.75 6.35 6.35 1.75 12 1.75C17.65 1.75 22.25 6.35 22.25 12Z" fill="#262626"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_2_472">
+                                        <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                    `
+        const repost_comment = document.createElement("div")
+        repost_comment.innerHTML = `
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2_474)">
+                                        <path d="M23.9 1.9C23.75 1.65 23.5 1.5 23.25 1.5H0.75C0.45 1.55 0.15 1.75 0.05 2C-0.05 2.25 0 2.6 0.2 2.85L8.15 10.65L10.9 21.95C10.95 22.25 11.2 22.45 11.5 22.5H11.6C11.85 22.5 12.1 22.35 12.25 22.15L23.85 2.65C24.05 2.45 24.05 2.15 23.9 1.9ZM2.6 3.05H20.35L9 9.35L2.6 3.05ZM11.95 19.85L9.75 10.65L21.2 4.3L11.95 19.85Z" fill="#262626"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_2_474">
+                                        <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                    `
 
-        const izbrannoe_comment = document.createElement("img")
-        izbrannoe_comment.src = "img/izbrannoe.svg"
+        const izbrannoe_comment = document.createElement("div")
+        izbrannoe_comment.innerHTML = `
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2_476)">
+                                        <path d="M21.75 24C21.55 24 21.35 23.9 21.2 23.8L12 14.5L2.8 23.8C2.6 24 2.25 24.1 2 23.95C1.7 23.85 1.5 23.55 1.5 23.25V0.75C1.5 0.35 1.85 0 2.25 0H21.75C22.15 0 22.5 0.35 22.5 0.75V23.25C22.5 23.55 22.3 23.85 22.05 23.95C21.95 24 21.85 24 21.75 24ZM12 13C12.4 13 12.8 13.15 13.1 13.45L21 21.45V1.5H3V21.45L10.9 13.45C11.2 13.15 11.6 13 12 13Z" fill="#262626"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_2_476">
+                                        <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                    `
 
         const likescount_comment = document.createElement("p")
         likescount_comment.innerHTML = "8,888 likes"
@@ -347,8 +431,19 @@ function reload(arr, users) {
         let user_comment = "Lorem ipsum dolor sit amet"
         const cm_us = `${nickname_user} ${user_comment}`
 
-        const cm_like = document.createElement("img")
-        cm_like.src = "img/commentlike.svg"
+        const cm_like = document.createElement("div")
+        cm_like.innerHTML = `
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_480)">
+                                <path d="M8.65 1.52499C10.075 1.52499 11.25 2.82499 11.25 4.39999C11.25 6.09999 9.775 7.14999 8.375 8.39999C6.975 9.64999 6.25 10.325 6 10.475C5.725 10.3 4.825 9.47499 3.625 8.39999C2.2 7.14999 0.75 6.09999 0.75 4.39999C0.75 2.82499 1.925 1.52499 3.35 1.52499C4.4 1.52499 4.975 2.02499 5.375 2.59999C5.85 3.24999 5.925 3.57499 6 3.57499C6.075 3.57499 6.15 3.24999 6.625 2.59999C7.025 2.02499 7.6 1.52499 8.65 1.52499ZM8.65 0.774994C7.525 0.774994 6.675 1.22499 6 2.17499C5.325 1.24999 4.475 0.799994 3.35 0.799994C1.5 0.774994 0 2.39999 0 4.39999C0 6.22499 1.35 7.39999 2.65 8.52499C2.8 8.64999 2.975 8.79999 3.125 8.94999L3.7 9.44999C4.8 10.425 5.35 10.925 5.6 11.075C5.725 11.15 5.875 11.2 6 11.2C6.15 11.2 6.275 11.15 6.4 11.075C6.65 10.925 7.1 10.525 8.35 9.37499L8.85 8.92499C9.025 8.77499 9.175 8.62499 9.35 8.49999C10.675 7.39999 12 6.24999 12 4.39999C12 2.39999 10.5 0.774994 8.65 0.774994Z" fill="#262626"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_2_480">
+                                <rect width="12" height="12" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                            `
 
 
        

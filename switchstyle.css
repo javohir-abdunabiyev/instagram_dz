@@ -1,0 +1,25 @@
+:root {
+    background-color: #F8F7F1;
+    --color-body: #2A2A2A;
+    --color-switcher: rgba(38, 38, 38, 1);
+}
+
+body.darkstyle {
+    background-color: #1F1F1F;
+    --color-body: #F8F4F0;
+    --color-switcher: white;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-body);
+}
+
+svg path {
+    fill: var(--color-switcher);
+}
+
+.dark_mode_for_comment_modal {
+    background-color: #1F1F1F;
+    color: white;
+}
